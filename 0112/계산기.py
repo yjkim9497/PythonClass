@@ -21,11 +21,19 @@ while True:
         print("계산기를 종료합니다.")
         break
     cal = input("연산자 : ")
-    t = 0
+    t = 0  # 어떤 변수인지 알 수 있게 변수명 주기
 
     if num2 == 0 and cal == "/":
         print("0으로는 나누기를 할 수 없습니다. 다른 연산자를 입력해주세요.")
         cal = input("연산자 : ")
+        if cal == "+":
+            t = num1 + num2
+        elif cal == "-":
+            t = num1 - num2
+        elif cal == "*":
+            t = num1 * num2
+        elif cal == "/":
+            t = num1 //num2
 
     else :
         if cal == "+":
